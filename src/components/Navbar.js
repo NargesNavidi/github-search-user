@@ -10,16 +10,16 @@ const Navbar = () => {
   return (
     <Wrapper>
       {isUser ? (
-        <div>
+        <>
           <img src={user.picture} alt={user.name} />
           <h4>
             Welcome, <strong>{user.name.toUpperCase()}</strong>
           </h4>
-          <p>{user.email}</p>
+          {/* <p>{user.email}</p> */}
           <button className='btn' onClick={() => logout()}>
             logout
           </button>
-        </div>
+        </>
       ) : (
         <button className='btn' onClick={() => loginWithRedirect()}>
           login
